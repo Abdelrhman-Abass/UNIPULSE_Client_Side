@@ -1,7 +1,6 @@
 import { ThemeProvider } from "@/components/theme"
 import { ReactQueryProvider } from "@/react-query/provider"
 import { ReduxProvider } from "@/redux/provider"
-import { ClerkProvider } from "@clerk/nextjs"
 import type { Metadata } from "next"
 import { Plus_Jakarta_Sans } from "next/font/google"
 import { Toaster } from "sonner"
@@ -20,7 +19,6 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <ClerkProvider>
             <html lang="en">
                 <body className={jakarta.className}>
                     <ThemeProvider
@@ -35,6 +33,5 @@ export default function RootLayout({
                     </ThemeProvider>
                 </body>
             </html>
-        </ClerkProvider>
     )
 }
